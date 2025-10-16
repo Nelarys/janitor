@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Janitor</title>
+	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,21 +17,77 @@
             Info@Janitor.brussel<br>
             Open by Appointment<br>
         </div>
-
-        <a href="#">Subsribe to newsletter</a>
     </header>
 
+    <div class="exhibitions">
+        <div class="exhibition active">
+            <h1>Petty boots</h1>
+            <div class="context">
+                <p>
+                    Micha Chamiloc, Nicholas Goudket, Laurène Buchheit
+                </p>
+                <p>
+                  <time datetime="2025-10-24">10.24.2025</time> –
+                  <time datetime="2025-11-24">11.24.2025</time>
+                </p>
+            </div>
+        </div>
+
+        <div class="exhibition">
+            <div class="context">
+                <p>
+                    Doris hardeman
+                </p>
+                <p>
+                    A rose is a rose is a rose
+                </p>
+                <p>
+                  <time datetime="2025-12-16">12.16.2025</time> –
+                  <time datetime="2025-01-27">01.27.2025</time>
+                </p>
+            </div>
+        </div>
+
+        <div class="exhibition">
+            <div class="context">
+                <p>
+                    Mara Jenny
+                </p>
+                <p>
+                    PolterAbend
+                </p>
+                <p>
+                  <time datetime="2025-03-24">03.24.2025</time> –
+                  <time datetime="2025-04-24">04.24.2025</time>
+                </p>
+            </div>
+        </div>
+    </div>
 
 
-    <!--Petty boots
-    Micha Chamiloc, Nicholas Goudket, Laurène Buchheit
-    10.23.2025- 11.24.2025-->
+    <!--<a href="#">Subsribe to newsletter</a>-->
+
+    <div>
+        <form id="mailingForm">
+            <label>
+                Name:
+                <input type="text" name="name" required>
+            </label>
+            <label>
+                Email:
+                <input type="email" name="email" required>
+            </label>
+            <button type="submit">Join our mailinglist</button>
+        </form>
+
+        <p id="responseMessage"></p>
+    </div>
 
 
 
 
 
-
-<script src="script.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="form.js" defer></script>
 </body>
 </html>

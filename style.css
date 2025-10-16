@@ -1,9 +1,77 @@
+@font-face {
+    font-family: 'Letter Gothic Std';
+    src: url('fonts/Letter Gothic std/Letter Gothic Std.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Canora';
+    src: url('fonts/Canora\ -\ Web/Canora-Verso.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body {
     background-image: url('images/background.jpg');
     background-size: 1500px;
     /*background-repeat: no-repeat;*/
     /*background-position: center;*/
+    padding: 20px 40px;
 
-    min-height: 300vh;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+
+    font-family: 'Letter Gothic Std', monospace;
+    font-weight: 1000;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    /*margin-bottom: 50px;*/
+
+    font-size: 1.3em;
+}
+
+/* EXHIBITIONS */
+.exhibitions {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.exhibition {
+    max-width: 50ch;
+    margin-left: 40px;
+
+
+    h1 {
+        font-family: 'Canora';
+        font-size: 3em;
+        font-weight: 500;
+        transform: skewX(15deg);
+
+        letter-spacing: 0.1em;
+        line-height: 0.8em;
+    }
+
+    .context {
+        margin-left: 1em;
+    }
+
+}
+
+.exhibition.active {
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+/* MAILING FORM */
+
+label {
+    display: block;
 }
