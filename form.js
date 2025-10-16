@@ -11,7 +11,7 @@ form.addEventListener('submit', e => {
 
   fetch(scriptUrl, {
     method: 'POST',
-    mode: 'no-cors',
+    // mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
   })
