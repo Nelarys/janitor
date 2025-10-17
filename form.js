@@ -11,21 +11,13 @@ form.addEventListener('submit', e => {
 
   fetch(scriptUrl, {
     method: 'POST',
-    // mode: 'no-cors',
+    mode: 'no-cors',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
   })
   .then(response => response.text())
-  .then(result => {
-    console.log('HERE');
-    console.log(result);
-    if (result === 'duplicate') {
-      resultMessage.textContent = "you're already on the list"
-    } else if (result === 'success') {
-      resultMessage.textContent = "Added successfully"
-    } else {
-      resultMessage.textContent = "unexpected response :/"
-    }
+  .then(() => {
+    resultMessage.textContent = "Added successfully"
     form.reset();
   })
   .catch(err => {
