@@ -1,71 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Janitor</title>
-	<link rel="stylesheet" href="reset.css">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        Janitor
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Janitor</title>
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header>
+            Janitor
 
-        <div id="info">
-            Rue Auguste geveart 54,<br>
-            1070 Anderlecht<br>
-            Info@Janitor.brussel<br>
-            Open by Appointment<br>
-        </div>
-    </header>
+            <div id="info">
+                Rue Auguste geveart 54,<br />
+                1070 Anderlecht<br />
+                Info@Janitor.brussel<br />
+                Open by Appointment<br />
+            </div>
+        </header>
 
-    <div class="exhibitions">
-        <div class="exhibition active">
-            <h1>Petty boots</h1>
-            <div class="context">
-                <p>
-                    Micha Chamiloc, Nicholas Goudket, Laurène Buchheit
-                </p>
-                <p>
-                  <time datetime="2025-10-24">10.24.2025</time> –
-                  <time datetime="2025-11-24">11.24.2025</time>
-                </p>
+        <div class="exhibitions">
+            <div class="exhibition active">
+                <h1>Petty boots</h1>
+                <div class="context">
+                    <p>Micha Chamiloc, Nicholas Goudket, Laurène Buchheit</p>
+                    <p>
+                        <time datetime="2025-10-24">10.24.2025</time> –
+                        <time datetime="2025-11-24">11.24.2025</time>
+                    </p>
+                </div>
+            </div>
+
+            <div class="exhibition">
+                <div class="context">
+                    <p>Doris hardeman</p>
+                    <p>A rose is a rose is a rose</p>
+                    <p>
+                        <time datetime="2025-12-16">12.16.2025</time> –
+                        <time datetime="2025-01-27">01.27.2025</time>
+                    </p>
+                </div>
+            </div>
+
+            <div class="exhibition">
+                <div class="context">
+                    <p>Mara Jenny</p>
+                    <p>PolterAbend</p>
+                    <p>
+                        <time datetime="2025-03-24">03.24.2025</time> –
+                        <time datetime="2025-04-24">04.24.2025</time>
+                    </p>
+                </div>
             </div>
         </div>
 
-        <div class="exhibition">
-            <div class="context">
-                <p>
-                    Doris hardeman
-                </p>
-                <p>
-                    A rose is a rose is a rose
-                </p>
-                <p>
-                  <time datetime="2025-12-16">12.16.2025</time> –
-                  <time datetime="2025-01-27">01.27.2025</time>
-                </p>
-            </div>
-        </div>
-
-        <div class="exhibition">
-            <div class="context">
-                <p>
-                    Mara Jenny
-                </p>
-                <p>
-                    PolterAbend
-                </p>
-                <p>
-                  <time datetime="2025-03-24">03.24.2025</time> –
-                  <time datetime="2025-04-24">04.24.2025</time>
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-    <div>
+        <!--<div>
         <form id="mailingForm">
             <label>
                 Email:
@@ -75,13 +64,38 @@
         </form>
 
         <p id="responseMessage"></p>
-    </div>
+    </div>-->
 
+        <div class="formDialogue">
+            <span id="subscribeText">Subscribe to newsletter</span>
 
+            <form id="mailingForm">
+                <div>
+                    Dear Janitor,<br />
+                    You can reach me at
+                    <span
+                        contenteditable="true"
+                        class="emailField"
+                        id="emailDisplay"
+                        data-placeholder="example@mail.com"
+                    ></span>
+                    <input
+                        type="email"
+                        id="emailInput"
+                        name="email"
+                        placeholder="example@mail.com"
+                        required
+                        hidden
+                    /><br />
+                    Please keep me informed.
+                </div>
+                <div id="submitlink">[ ] Send</div>
+                <p id="responseMessage"></p>
+            </form>
 
+        </div>
 
-
-    <script src="script.js" defer></script>
-    <script src="form.js" defer></script>
-</body>
+        <script src="script.js" defer></script>
+        <script src="form.js" defer></script>
+    </body>
 </html>

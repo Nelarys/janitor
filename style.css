@@ -1,20 +1,20 @@
 @font-face {
-    font-family: 'Letter Gothic Std';
-    src: url('fonts/Letter Gothic std/Letter Gothic Std.woff2') format('woff2');
+    font-family: "Letter Gothic Std";
+    src: url("fonts/Letter Gothic std/Letter Gothic Std.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Canora';
-    src: url('fonts/Canora\ -\ Web/Canora-Verso.woff2') format('woff2');
+    font-family: "Canora";
+    src: url("fonts/Canora\ -\ Web/Canora-Verso.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 }
 
 body {
-    background-image: url('images/background.jpg');
-    background-size: 1500px;
+    background-image: url("images/background.jpg");
+    background-size: 1400px;
     /*background-repeat: no-repeat;*/
     /*background-position: center;*/
     padding: 20px 40px;
@@ -23,9 +23,9 @@ body {
     flex-direction: column;
     gap: 50px;
 
-
-    font-family: 'Letter Gothic Std', monospace;
-    font-weight: 1000;
+    font-family: "Letter Gothic Std", monospace;
+    /*font-weight: 1000;*/
+    line-height: 1.3em;
 }
 
 header {
@@ -48,12 +48,11 @@ header {
     max-width: 50ch;
     margin-left: 40px;
 
-
     h1 {
-        font-family: 'Canora';
+        font-family: "Canora";
         font-size: 3em;
         font-weight: 500;
-        transform: skewX(15deg);
+        transform: skewX(25deg);
 
         letter-spacing: 0.1em;
         line-height: 0.8em;
@@ -62,7 +61,6 @@ header {
     .context {
         margin-left: 1em;
     }
-
 }
 
 .exhibition.active {
@@ -71,7 +69,63 @@ header {
 }
 
 /* MAILING FORM */
+form {
+    display: none;
+    flex-direction: column;
+    gap: 15px;
 
-label {
-    display: block;
+    line-height: 2em;
+}
+
+form.active {
+    display: flex;
+}
+
+.emailField {
+    /*border-bottom: 1px solid #555;*/
+    min-width: 8ch;
+    outline: none;
+    padding: 0 0px;
+    /*word-break: break-all;*/
+
+    font-family: "Canora";
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+}
+
+.emailField::before, .emailField::after {
+    border-bottom: 1px solid #555;
+}
+
+.emailField:empty::before {
+    content: attr(data-placeholder);
+    color: #888;
+}
+
+.emailField:focus {
+    border-bottom: 1px solid #555;
+}
+
+.emailField:focus::before, .emailField:focus::after {
+    content: "x";
+    color: transparent;
+}
+
+#submitlink {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+
+.cursor {
+    margin-left: 0.1em;
+    border-right: 0.06em solid;
+    animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
 }
