@@ -134,10 +134,6 @@ form.active {
 }
 
 /* CURSOR */
-html, body {
-    cursor: none;
-}
-
 #cursor {
     position: fixed;
     top: 0;
@@ -160,6 +156,22 @@ html, body {
 body:active #cursor { /*click effect*/
   width: 6px;
   height: 6px;
+}
+
+@media (pointer: fine) {
+    html, body {
+        cursor: none;
+    }
+
+  #cursor {
+    display: block;
+  }
+}
+
+@media (pointer: coarse), (hover: none) {
+  #cursor {
+    display: none;
+  }
 }
 
 /* DESKTOP VERSION */

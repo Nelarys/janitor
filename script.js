@@ -1,11 +1,17 @@
-const cursor = document.querySelector('#cursor');
+const isTouchDevice = window.matchMedia(
+  "(pointer: coarse), (hover: none)",
+).matches;
 
-document.addEventListener('mousemove', (e) => {
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top = e.clientY + 'px';
-});
+if (!isTouchDevice) {
+  const cursor = document.querySelector("#cursor");
 
-document.querySelectorAll("a, button, .clickable").forEach(el => {
-  el.addEventListener("mouseenter", () => cursor.classList.add('hover'));
-  el.addEventListener("mouseleave", () => cursor.classList.remove('hover'));
-})
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  document.querySelectorAll("a, button, .clickable").forEach((el) => {
+    el.addEventListener("mouseenter", () => cursor.classList.add("hover"));
+    el.addEventListener("mouseleave", () => cursor.classList.remove("hover"));
+  });
+}
