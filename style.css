@@ -80,7 +80,7 @@ form.active {
 }
 
 .clickable {
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 .emailField {
@@ -101,7 +101,7 @@ form.active {
 .emailField:empty::before {
     content: attr(data-placeholder);
     color: #888;
-    cursor: text;
+    /*cursor: text;*/
 }
 
 .emailField:focus {
@@ -133,6 +133,35 @@ form.active {
     }
 }
 
+/* CURSOR */
+html, body {
+    cursor: none;
+}
+
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s linear, width 0.2s ease, height 0.2s ease;
+}
+
+#cursor.hover {
+    background: deeppink;
+}
+
+body:active #cursor { /*click effect*/
+  width: 6px;
+  height: 6px;
+}
+
 /* DESKTOP VERSION */
 @media (min-width: 768px) {
     body {
@@ -143,7 +172,6 @@ form.active {
     header {
         order: 1;
     }
-
 
     .exhibitions {
         order: 3;
