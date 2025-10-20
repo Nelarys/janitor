@@ -7,7 +7,7 @@ const resultMessage = document.getElementById("responseMessage");
 const emailDisplay = document.getElementById("emailDisplay");
 const emailInput = document.getElementById("emailInput");
 const submitLink = document.getElementById("submitlink");
-
+const cancelLink = document.getElementById("cancellink");
 
 
 
@@ -20,6 +20,12 @@ subscribeText.addEventListener("click", () => {
 // sync up the email display with the hidden email input
 emailDisplay.addEventListener("input", () => {
   emailInput.value = emailDisplay.textContent.trim();
+});
+
+// cancel form menu
+cancelLink.addEventListener("click", () => {
+  subscribeText.style.display = "block";
+  form.classList.remove("active");
 });
 
 // send email to list and trigger user feedback
@@ -42,9 +48,9 @@ submitLink.addEventListener("click", (e) => {
     body: JSON.stringify({ email }),
   })
     .then(() => {
-      submitLink.style.display = "none";
+      submitLink.parentElement.style.display = "none";
       resultMessage.textContent = "";
-      typeWriter("Sure, you will hear from me soon!", 0);
+      typeWriter("You will hear from me soon!", 0);
     })
     .catch((err) => {
       console.error(err);

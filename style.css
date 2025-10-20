@@ -14,18 +14,16 @@
 
 body {
     background-image: url("images/background.jpg");
-    background-size: 1400px;
-    /*background-repeat: no-repeat;*/
-    /*background-position: center;*/
+    background-size: 1000px;
     padding: 20px 40px;
 
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 80px;
 
     font-family: "Letter Gothic Std", monospace;
     /*font-weight: 1000;*/
-    line-height: 1.3em;
+    line-height: 1.1;
 }
 
 header {
@@ -34,14 +32,16 @@ header {
     gap: 1em;
     /*margin-bottom: 50px;*/
 
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 /* EXHIBITIONS */
 .exhibitions {
     display: flex;
     flex-direction: column;
-    gap: 2em;
+    gap: 2rem;
+
+    margin-left: 1.5rem;
 }
 
 .exhibition {
@@ -50,16 +50,14 @@ header {
 
     h1 {
         font-family: "Canora";
-        font-size: 3em;
+        font-size: 3rem;
         font-weight: 500;
-        transform: skewX(25deg);
+        transform: skewX(30deg);
 
         letter-spacing: 0.1em;
-        line-height: 0.8em;
-    }
+        line-height: 0.8;
 
-    .context {
-        margin-left: 1em;
+        margin-left: -1.4rem;
     }
 }
 
@@ -74,22 +72,24 @@ form {
     flex-direction: column;
     gap: 15px;
 
-    line-height: 2em;
+    /*line-height: 2em;*/
 }
 
 form.active {
     display: flex;
 }
 
+.clickable {
+    cursor: pointer;
+}
+
 .emailField {
-    /*border-bottom: 1px solid #555;*/
     min-width: 8ch;
     outline: none;
-    padding: 0 0px;
     /*word-break: break-all;*/
 
     font-family: "Canora";
-    font-size: 1.2em;
+    font-size: 1.2rem;
     letter-spacing: 0.1em;
     font-weight: bold;
 }
@@ -101,6 +101,7 @@ form.active {
 .emailField:empty::before {
     content: attr(data-placeholder);
     color: #888;
+    cursor: text;
 }
 
 .emailField:focus {
@@ -112,8 +113,10 @@ form.active {
     color: transparent;
 }
 
-#submitlink {
-    margin-top: 15px;
+.actionSelectors {
+    display: flex;
+    gap: 40px;
+
     font-weight: bold;
 }
 
@@ -127,5 +130,41 @@ form.active {
 @keyframes caret {
     50% {
         border-color: transparent;
+    }
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 768px) {
+    body {
+        padding: 80px 140px;
+        gap: 40px;
+    }
+
+    header {
+        order: 1;
+    }
+
+
+    .exhibitions {
+        order: 3;
+        margin-left: 0;
+    }
+
+    .exhibition.active {
+        margin-bottom: 0;
+    }
+
+    .exhibition {
+        margin-left: 0;
+        max-width: 70ch;
+
+        h1 {
+            font-size: 5em;
+        }
+    }
+
+    .formDialogue {
+        order: 2;
+        margin-bottom: 40px;
     }
 }

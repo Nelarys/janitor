@@ -11,12 +11,12 @@
         <header>
             Janitor
 
-            <div id="info">
+            <address>
                 Rue Auguste geveart 54,<br />
                 1070 Anderlecht<br />
-                Info@Janitor.brussel<br />
+                <a href="mailto:info@janitor.brussel">Info@Janitor.brussel</a><br />
                 Open by Appointment<br />
-            </div>
+            </address>
         </header>
 
         <div class="exhibitions">
@@ -54,25 +54,16 @@
             </div>
         </div>
 
-        <!--<div>
-        <form id="mailingForm">
-            <label>
-                Email:
-                <input type="email" name="email" required>
-            </label>
-            <button type="submit">Join our mailinglist</button>
-        </form>
-
-        <p id="responseMessage"></p>
-    </div>-->
 
         <div class="formDialogue">
-            <span id="subscribeText">Subscribe to newsletter</span>
+            <span id="subscribeText" class="clickable">Subscribe to newsletter?</span>
 
             <form id="mailingForm">
                 <div>
                     Dear Janitor,<br />
-                    You can reach me at
+                    <br/>
+                    Please keep me informed.<br />
+                    You can mail me at
                     <span
                         contenteditable="true"
                         class="emailField"
@@ -86,13 +77,17 @@
                         placeholder="example@mail.com"
                         required
                         hidden
-                    /><br />
-                    Please keep me informed.
+                    /><br/>
+                    <br/>
+                    Warmly,<br/>
+                    Visitor
                 </div>
-                <div id="submitlink">[ ] Send</div>
+                <div class="actionSelectors">
+                    <div id="submitlink" class="clickable">[ ] Send</div>
+                    <div id="cancellink" class="clickable">[ ] Cancel</div>
+                </div>
                 <p id="responseMessage"></p>
             </form>
-
         </div>
 
         <script src="script.js" defer></script>
