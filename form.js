@@ -35,11 +35,11 @@ submitLink.addEventListener("click", (e) => {
   const email = emailInput.value.trim();
   if (!emailInput.checkValidity()) {
     resultMessage.textContent = "";
-    typeWriter("Please enter a valid email address.", 0);
+    typeWriter("> Please enter a valid email address.", 0);
     return;
   }
 
-  submitLink.textContent = "[*] Sending...";
+  submitLink.textContent = "(*) Sending...";
 
   fetch(scriptUrl, {
     method: "POST",
@@ -50,13 +50,13 @@ submitLink.addEventListener("click", (e) => {
     .then(() => {
       submitLink.parentElement.style.display = "none";
       resultMessage.textContent = "";
-      typeWriter("You will hear from me soon!", 0);
+      typeWriter("> You will hear from me soon!", 0);
     })
     .catch((err) => {
       console.error(err);
-      submitLink.textContent = "[ ] Send";
+      submitLink.textContent = "( ) Send";
       resultMessage.textContent = "";
-      typeWriter("Something went wrong. Please try again later.", 0);
+      typeWriter("> Something went wrong. Please try again later.", 0);
     });
 });
 

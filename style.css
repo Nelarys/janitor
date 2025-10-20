@@ -70,7 +70,7 @@ header {
 form {
     display: none;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
 
     /*line-height: 2em;*/
 }
@@ -116,10 +116,11 @@ form.active {
 .actionSelectors {
     display: flex;
     gap: 40px;
-
-    font-weight: bold;
 }
 
+#responseMessage {
+    /*font-weight: bold;*/
+}
 
 .cursor {
     margin-left: 0.1em;
