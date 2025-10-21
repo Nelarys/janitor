@@ -80,12 +80,11 @@ form input {
     font-size: 1.3rem;
     letter-spacing: 0.1em;
     font-weight: bold;
-
-    text-decoration: none;
 }
 
 form input:placeholder-shown {
-    text-decoration: underline 1px;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
     text-underline-offset: 3px;
 }
 
