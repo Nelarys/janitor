@@ -4,22 +4,14 @@ const scriptUrl =
 const form = document.getElementById("mailingForm");
 const subscribeText = document.getElementById("subscribeText");
 const resultMessage = document.getElementById("responseMessage");
-const emailDisplay = document.getElementById("emailDisplay");
 const emailInput = document.getElementById("emailInput");
 const submitLink = document.getElementById("submitlink");
 const cancelLink = document.getElementById("cancellink");
-
-
 
 // toggles the email form visibility
 subscribeText.addEventListener("click", () => {
   subscribeText.style.display = "none";
   form.classList.add("active");
-});
-
-// sync up the email display with the hidden email input
-emailDisplay.addEventListener("input", () => {
-  emailInput.value = emailDisplay.textContent.trim();
 });
 
 // cancel form menu
@@ -62,41 +54,15 @@ submitLink.addEventListener("click", (e) => {
 
 function typeWriter(text, i) {
   if (i < text.length) {
-    resultMessage.innerHTML = text.substring(0, i + 1) + '<span class="cursor" aria-hidden="true"></span>';
+    resultMessage.innerHTML =
+      text.substring(0, i + 1) +
+      '<span class="cursor" aria-hidden="true"></span>';
 
     setTimeout(function () {
-      typeWriter(text, i + 1)
+      typeWriter(text, i + 1);
     }, Math.random() * 100);
   } else {
     // remove cursor from end if element is done
     resultMessage.innerHTML = text;
-    callback();
   }
 }
-
-
-
-
-// form.addEventListener('submit', e => {
-//   e.preventDefault();
-
-//   const data = {
-//     email: form.email.value
-//   };
-
-//   fetch(scriptUrl, {
-//     method: 'POST',
-//     mode: 'no-cors',
-//     headers: { 'Content-Type': 'application/json' },
-//     body: JSON.stringify(data)
-//   })
-//   .then(response => response.text())
-//   .then(() => {
-//     resultMessage.textContent = "Added successfully"
-//     form.reset();
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     resultMessage.textContent = "failed to add to mailinglist"
-//   })
-// })

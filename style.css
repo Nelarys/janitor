@@ -67,50 +67,40 @@ header {
 }
 
 /* MAILING FORM */
+form input {
+    display: block;
+    cursor: none;
+
+    background: none;
+    width: 100%;
+    border: none;
+    outline: none;
+
+    font-family: "Canora";
+    font-size: 1.3rem;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+form input:placeholder-shown {
+    text-decoration: underline 1px;
+    text-underline-offset: 3px;
+}
+
+form input:focus {
+    transform: skewX(-20deg);
+}
+
 form {
     display: none;
     flex-direction: column;
     gap: 30px;
-
-    /*line-height: 2em;*/
 }
 
 form.active {
     display: flex;
-}
-
-.clickable {
-    /*cursor: pointer;*/
-}
-
-.emailField {
-    min-width: 8ch;
-    outline: none;
-    /*word-break: break-all;*/
-
-    font-family: "Canora";
-    font-size: 1.2rem;
-    letter-spacing: 0.1em;
-    font-weight: bold;
-}
-
-.emailField::before, .emailField::after {
-    border-bottom: 1px solid #555;
-}
-
-.emailField:empty::before {
-    content: attr(data-placeholder);
-    color: #888;
-    /*cursor: text;*/
-}
-
-.emailField:focus {
-    border-bottom: 1px solid #555;
-}
-
-.emailField:focus::before, .emailField:focus::after {
-    content: "x";
-    color: transparent;
 }
 
 .actionSelectors {
@@ -118,9 +108,6 @@ form.active {
     gap: 40px;
 }
 
-#responseMessage {
-    /*font-weight: bold;*/
-}
 
 .cursor {
     margin-left: 0.1em;
