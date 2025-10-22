@@ -22,7 +22,6 @@ body {
     gap: 80px;
 
     font-family: "Letter Gothic Std", monospace;
-    /*font-weight: 1000;*/
     line-height: 1.1;
 }
 
@@ -30,7 +29,6 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1em;
-    /*margin-bottom: 50px;*/
 
     font-size: 1.3rem;
 }
@@ -49,14 +47,29 @@ header {
     margin-left: 40px;
 
     h1 {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+}
+
+.exhibition:hover h1 {
+    font-family: "Canora";
+    transform: skewX(30deg);
+    font-size: 5rem;
+    font-weight: 500;
+    line-height: 0.8;
+    letter-spacing: 0.1em;
+    margin-left: -1.4rem;
+}
+
+@media (pointer: coarse), (hover: none) {
+    .exhibition h1 {
         font-family: "Canora";
+        transform: skewX(30deg);
         font-size: 3rem;
         font-weight: 500;
-        transform: skewX(30deg);
-
-        letter-spacing: 0.1em;
         line-height: 0.8;
-
+        letter-spacing: 0.1em;
         margin-left: -1.4rem;
     }
 }
@@ -184,10 +197,6 @@ body:active #cursor { /*click effect*/
     .exhibition {
         margin-left: 0;
         max-width: 70ch;
-
-        h1 {
-            font-size: 5em;
-        }
     }
 
     .formDialogue {
