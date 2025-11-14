@@ -49,6 +49,9 @@ header {
     h1 {
         font-size: inherit;
         font-weight: inherit;
+        height: 5rem;
+        display: flex;
+        align-items: flex-end;
     }
 }
 
@@ -89,8 +92,7 @@ form input {
     border: none;
     outline: none;
 
-    font-family: "Canora";
-    font-size: 1.3rem;
+    font-family: "Letter Gothic Std";
     letter-spacing: 0.1em;
     font-weight: bold;
 }
