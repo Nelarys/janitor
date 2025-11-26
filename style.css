@@ -122,7 +122,6 @@ form.active {
     gap: 40px;
 }
 
-
 .cursor {
     margin-left: 0.1em;
     border-right: 0.06em solid;
@@ -148,32 +147,37 @@ form.active {
     pointer-events: none;
     z-index: 9999;
     transform: translate(-50%, -50%);
-    transition: transform 0.05s linear, width 0.2s ease, height 0.2s ease;
+    transition:
+        transform 0.05s linear,
+        width 0.2s ease,
+        height 0.2s ease;
 }
 
 #cursor.hover {
     background: deeppink;
 }
 
-body:active #cursor { /*click effect*/
-  width: 6px;
-  height: 6px;
+body:active #cursor {
+    /*click effect*/
+    width: 6px;
+    height: 6px;
 }
 
 @media (pointer: fine) {
-    html, body {
+    html,
+    body {
         cursor: none;
     }
 
-  #cursor {
-    display: block;
-  }
+    #cursor {
+        display: block;
+    }
 }
 
 @media (pointer: coarse), (hover: none) {
-  #cursor {
-    display: none;
-  }
+    #cursor {
+        display: none;
+    }
 }
 
 /* DESKTOP VERSION */
@@ -205,4 +209,18 @@ body:active #cursor { /*click effect*/
         order: 2;
         margin-bottom: 40px;
     }
+}
+
+/* Voor maus, poging om een css style te maken voor expo documentatie*/
+/* documentation */
+.documentation {
+    max-width: 100%;
+    margin-left: 40px;
+}
+
+.img {
+    border: 0px;
+    margin: 0px;
+    margin-bottom: 5px;
+    margin-top: 0px;
 }
