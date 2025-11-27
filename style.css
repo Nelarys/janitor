@@ -219,8 +219,21 @@ body:active #cursor {
 }
 
 .img {
+    position: relative;
     border: 0px;
     margin: 0px;
     margin-bottom: 5px;
     margin-top: 0px;
+}
+
+.img:hover:after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    white-space: nowrap;
+    z-index: 999;
+    background: #ccc;
+    color: black;
+    padding: 5px;
 }
