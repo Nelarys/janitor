@@ -212,18 +212,43 @@ body:active #cursor {
 }
 
 /* Voor maus, poging om een css style te maken voor expo documentatie*/
-/* documentation */
-.documentation {
-    max-width: 100%;
+/* documentation petty boots */
+.documentationtitel {
+    h1 {
+        font-family: "Canora";
+        transform: skewX(30deg);
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 0.8;
+        letter-spacing: 0.1em;
+        margin-left: -1.4rem;
+    }
+}
+
+.documentationtext {
+    max-width: 100ch;
     margin-left: 40px;
+    display: inline-block;
+
+    p {
+        margin-bottom: 2em;
+    }
 }
 
 .img {
-    position: relative;
-    border: 0px;
-    margin: 0px;
-    margin-bottom: 5px;
-    margin-top: 0px;
+    max-width: 100ch;
+    margin-left: 40px;
+
+    img {
+        imgposition: relative;
+        border: 0px;
+        margin: 0px;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    Figcaption {
+        font-size: small;
+    }
 }
 
 .img:hover:after {
