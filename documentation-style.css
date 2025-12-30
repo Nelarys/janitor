@@ -1,0 +1,56 @@
+body {
+    padding: 20px 20px;
+    gap: 30px;
+}
+
+.documentationtitel {
+    h1 {
+        font-family: "Canora";
+        transform: skewX(30deg);
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 0.8;
+        letter-spacing: 0.1em;
+        margin-left: -1.4rem;
+    }
+}
+
+.documentationtext {
+    max-width: 60ch;
+
+    p {
+        margin-bottom: 2em;
+    }
+}
+
+figure {
+    figcaption {
+        margin-top: 1em;
+    }
+}
+
+.return-link {
+    color: #333;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.return-link:hover {
+    color: #007bff;
+}
+
+/* DESKTOP VERSIE */
+@media (min-width: 768px) {
+    body {
+        padding: 80px 140px;
+        gap: 40px;
+    }
+
+    figure {
+        max-width: min(80%, 1000px);
+    }
+
+    .documentationtext {
+        margin-left: 60px;
+    }
+}
