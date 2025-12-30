@@ -226,39 +226,28 @@ body:active #cursor {
 }
 
 .documentationtext {
-    max-width: 100ch;
-    margin-left: 40px;
-    display: inline-block;
+    max-width: 60ch;
+    margin-left: 60px;
 
     p {
         margin-bottom: 2em;
     }
 }
 
-.img {
-    max-width: 100ch;
-    margin-left: 40px;
+figure {
+    max-width: min(80%, 1000px);
 
-    img {
-        imgposition: relative;
-        border: 0px;
-        margin: 0px;
-        margin-bottom: 5px;
-        margin-top: 15px;
-    }
-    Figcaption {
-        font-size: small;
+    figcaption {
+        margin-top: 1em;
     }
 }
 
-.img:hover:after {
-    content: attr(title);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    white-space: nowrap;
-    z-index: 999;
-    background: #ccc;
-    color: black;
-    padding: 5px;
+.return-link {
+    color: #333;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.return-link:hover {
+    color: #007bff;
 }
