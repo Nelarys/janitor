@@ -27,7 +27,12 @@ body {
 figure {
     figcaption {
         margin-top: 1em;
+        margin-bottom: 2em;
     }
+}
+
+img {
+    width: 3600px;
 }
 
 .return-link {
@@ -41,14 +46,14 @@ figure {
 }
 
 /* DESKTOP VERSIE */
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
     body {
         padding: 80px 140px;
         gap: 40px;
+        min-width: 768px;
     }
 
     figure {
-        max-width: min(80%, 1000px);
     }
 
     .documentationtext {
